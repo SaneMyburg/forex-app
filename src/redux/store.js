@@ -3,7 +3,7 @@ import forexSlice from './ForexSlice';
 
 const store = configureStore({
   reducer: {
-    exchange: forexSlice,
+    currencies: forexSlice,
   },
 });
 

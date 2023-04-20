@@ -36,7 +36,7 @@ const forexSlice = createSlice({
       .addCase(fetchCurrencies.rejected, (state, action) => ({
         ...state,
         isLoading: false,
-        error: action.error,
+        error: action.payload,
       }));
   },
 });

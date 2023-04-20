@@ -1,0 +1,86 @@
+.list-container {
+  background: rgb(230, 129, 146);
+  color: white;
+}
+
+.recent-container {
+  text-align: center;
+  padding: 0.5em 0.5em 0.5em;
+}
+
+.recent-container p {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px 0 0;
+}
+
+.recent-container .recent-icons {
+  vertical-align: middle;
+  float: right;
+}
+
+.recent-container .recent-icons > *:first-child {
+  margin-right: 0.9em;
+}
+
+.recent-icons {
+  margin: 0.3em 1em 0 0;
+}
+
+.todays-rate-container {
+  background: rgb(238, 142, 159);
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.todays-rate-container h1 {
+  font-size: 1.3rem;
+}
+
+.opening-prices {
+  background: rgb(202, 114, 129);
+  padding: 0.3rem 1rem;
+}
+
+.pairs-container {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.pairs-container li a {
+  text-decoration: none;
+  color: white;
+}
+
+.individual-pair {
+  height: 24vh;
+  margin: 0;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.individual-pair:nth-child(4n+2),
+.individual-pair:nth-child(4n+3) {
+  background-color: palevioletred;
+}
+
+
+.ticker-name {
+  display: flex;
+  justify-content: center;
+}
+
+.ticker-rate {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 0;
+}
+
+.right-arrow {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 0 1rem 0;
+}

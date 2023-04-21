@@ -38,6 +38,8 @@
 }
 
 .opening-prices {
+  display: flex;
+  justify-content: space-between;
   background: rgb(202, 114, 129);
   padding: 0.3rem 1rem;
 }

@@ -75,7 +75,7 @@ const Home = () => {
           />
         </div>
       </div>
-      <ul className="pairs-container">
+      <ul className="pairs-container filtered-currencies">
         {filteredCurrencies.map((currency) => (
           <li className="individual-pair" key={currency.ticker}>
             <Link to="/ForexDetails" onClick={() => handleClicked(currency.ticker)}>

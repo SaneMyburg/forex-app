@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import '@testing-library/jest-dom';
 import { render, cleanup, screen } from '@testing-library/react';
 import configureMockStore from 'redux-mock-store';
-import { BrowserRouter } from 'react-router-dom'; 
+import { BrowserRouter } from 'react-router-dom';
 import ForexDetails from '../components/ForexDetails';
 
 const mockStore = configureMockStore();
@@ -41,7 +41,7 @@ describe('ForexDetails component test', () => {
   it('render selected pairs', () => {
     const { container } = render(
       <Provider store={store}>
-        <BrowserRouter> 
+        <BrowserRouter>
           <ForexDetails />
         </BrowserRouter>
       </Provider>,

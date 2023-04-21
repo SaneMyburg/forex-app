@@ -1,37 +1,64 @@
-import { render, cleanup, screen } from '@testing-library/react';
-import { Provider } from 'react-redux';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import '@testing-library/jest-dom/extend-expect';
 import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import Home from '../components/Home';
 
-afterEach(cleanup);
-const mockStore = configureMockStore();
-const store = mockStore({
-  currencies: {
-    currencies: [
-      {
-        ticker: 'EUR/USD',
-        open: '1.09720',
-      },
-      {
-        ticker: 'USD/JPY',
-        open: '134.122',
-      },
-    ],
-    selectedPair: [],
-    isLoading: false,
-    error: null,
-  },
-});
+const middlewares = [thunk];
+const mockStore = configureMockStore(middlewares);
 
-describe('HomePage component test', () => {
-  it('It renders', () => {
-    const { container } = render(
+describe('Home', () => {
+  let store;
+
+  beforeEach(() => {
+    store = mockStore({
+      currencies: {
+        currencyData: [
+          {
+            ticker: 'USD/EUR',
+            open: 0.8,
+          },
+          {
+            ticker: 'USD/JPY',
+            open: 110.5,
+          },
+        ],
+        isLoading: false,
+        error: null,
+      },
+    });
+  });
+
+  it('renders the component', () => {
+    render(
       <Provider store={store}>
-        <Home />
+        <BrowserRouter>
+          <Home />
+        </BrowserRouter>
       </Provider>,
     );
-    expect(container).toMatchSnapshot();
+
+    expect(screen.getByText('most recent price')).toBeInTheDocument();
+    expect(screen.getByText("Today's Rates")).toBeInTheDocument();
+    expect(screen.getByText('147 pairs')).toBeInTheDocument();
+    expect(screen.getByText('OPENING PRICES')).toBeInTheDocument();
+    expect(screen.getAllByRole('link')).toHaveLength(2);
+  });
+
+  it('dispatches the forexPair action when a currency pair is clicked', () => {
+    render(
+      <Provider store={store}>
+        <BrowserRouter>
+          <Home />
+        </BrowserRouter>
+      </Provider>,
+    );
+
+    screen.getAllByRole('link')[0].click();
+
+    const actions = store.getActions().filter((action) => action.type === 'currencies/forexPair');
+    expect(actions).toEqual([{ type: 'currencies/forexPair', payload: 'USD/EUR' }]);
   });
 });

@@ -14,6 +14,10 @@
   margin: 0 10px 0 0;
 }
 
+.recent-icons {
+  margin: 0.3em 1em 0 0;
+}
+
 .recent-container .recent-icons {
   vertical-align: middle;
   float: right;
@@ -21,10 +25,6 @@
 
 .recent-container .recent-icons > *:first-child {
   margin-right: 0.9em;
-}
-
-.recent-icons {
-  margin: 0.3em 1em 0 0;
 }
 
 .todays-rate-container {
@@ -66,7 +66,6 @@
 .individual-pair:nth-child(4n+3) {
   background-color: palevioletred;
 }
-
 
 .ticker-name {
   display: flex;

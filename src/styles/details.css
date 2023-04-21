@@ -17,7 +17,7 @@
 
 .details-p {
   height: 20vh;
-  background-color:  rgb(238, 142, 159);
+  background-color: rgb(238, 142, 159);
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -44,9 +44,8 @@
   background-color: palevioletred;
 }
 
-
 .first-p {
- padding-left: 2rem;
+  padding-left: 2rem;
 }
 
 .second-p {

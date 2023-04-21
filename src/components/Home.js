@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { FaMicrophone } from 'react-icons/fa';
@@ -10,6 +10,7 @@ import '../styles/home.css';
 const Home = () => {
   const dispatch = useDispatch();
   const { currencyData, isLoading, error } = useSelector((state) => state.currencies);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     dispatch(fetchCurrencies());
@@ -44,6 +45,11 @@ const Home = () => {
     );
   }
 
+  const filteredCurrencies = currencyData.filter((currency) => {
+    const search = searchTerm.toLowerCase();
+    return currency.ticker.toLowerCase().includes(search);
+  });
+
   return (
     <div className="list-container">
       <div className="recent-container">
@@ -60,9 +66,17 @@ const Home = () => {
       </div>
       <div className="opening-prices">
         <p>OPENING PRICES</p>
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
       </div>
       <ul className="pairs-container">
-        {currencyData && currencyData.map((currency) => (
+        {filteredCurrencies.map((currency) => (
           <li className="individual-pair" key={currency.ticker}>
             <Link to="/ForexDetails" onClick={() => handleClicked(currency.ticker)}>
               <div className="right-arrow">

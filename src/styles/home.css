@@ -71,6 +71,7 @@
 .ticker-name {
   display: flex;
   justify-content: center;
+  font-weight: bold;
 }
 
 .ticker-rate {

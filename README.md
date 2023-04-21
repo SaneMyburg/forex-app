@@ -107,7 +107,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/zdnahom/forex-app.git
+  git clone https://github.com/SaneMyburg/forex-app.git
 ```
 
 ### Install <a name="install"></a>

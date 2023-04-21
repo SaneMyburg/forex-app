@@ -28,7 +28,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Space Travelers' Hub <a name="about-project"></a>
+# 📖 Forex App <a name="about-project"></a>
 
 **Forex App**  is a React-based foreign exchange trading app:
 

@@ -1,0 +1,58 @@
+.details-container {
+  background: rgb(230, 129, 146);
+  color: white;
+}
+
+.details-top {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1em;
+  padding: 0.5em 0;
+}
+
+.extra-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.details-p {
+  height: 20vh;
+  background-color: rgb(238, 142, 159);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 0.8em 1em 0;
+}
+
+.details-para {
+  background: rgb(202, 114, 129);
+  padding: 0.3rem 1rem;
+}
+
+.details-top a {
+  color: white;
+}
+
+.details-div-child {
+  display: flex;
+  justify-content: space-between;
+  height: 15vh;
+  align-items: center;
+}
+
+.details-div-child:nth-child(odd) {
+  background-color: palevioletred;
+}
+
+.first-p {
+  padding-left: 2rem;
+}
+
+.second-p {
+  padding-right: 2rem;
+}
+
+.first-p,
+.second-p {
+  font-weight: bold;
+}

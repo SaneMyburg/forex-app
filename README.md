@@ -153,7 +153,8 @@ Give a ⭐️ if you like this project!
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank:
-- [Microverse](www.microverse.com)
+- [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for the amazing [design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
+- [Microverse](www.microverse.com) for providing support and knowlegde to build projects like this one.
 
 <!-- LICENSE -->
 

@@ -78,7 +78,7 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo Link](https://math-magic-puce.vercel.app/)
+- [Live Demo Link](https://sanemforex-app.netlify.app/)
 
 ## 🎞 Demo Video <a name="demo-video"><a>
 - [Demo Video Link](https://www.loom.com/share/83109ccc4d7946c2ae57e6b653a4af62)
